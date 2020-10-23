@@ -1,0 +1,30 @@
+
+Tomcat Server Port : 9276
+Context-root : interviewApp
+http://localhost:9276/interviewApp/interviews
+http://localhost:9276/interviewApp/users
+@PostMapping("/users")
+{
+  "firstName": "Karthik",
+  "lastName": "Mekole",
+  "email": "abcxyz@gmail.com",
+  "mobile": "9848022338"
+}
+
+@PostMapping("/interviews")
+{
+  "interviewerName": "SUraj",
+  "interviewName": "Java",
+  "userSkills":["Javascript","Gherkins"],
+  "interviewStatus":"NOTSTARTED",
+  "remarks":"None Yet" 
+}
+
+@DeleteMapping("/users/{mobile}")
+@GetMapping("/addAttendees/{interviewName}/{userId}")
+@GetMapping("/getAttendeesByInterviewName/{name}")
+@GetMapping("/searchInterviewByInterviewName/{interviewName}")
+@GetMapping("/searchInterviewByIntervieworName/{interviewerName}")
+@DeleteMapping("/removeInterview/{interviewName}")
+@PutMapping("/modifyStatus/{interviewName}/{status}")
+@GetMapping("/interviewCount")
